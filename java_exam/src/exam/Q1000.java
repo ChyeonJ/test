@@ -1,7 +1,5 @@
 package exam;
 
-import java.util.Scanner;
-
 public class Q1000 {
 
 	public static void main(String[] args) {
@@ -60,21 +58,6 @@ public class Q1000 {
 		
 		System.out.println("6번 문제 결과 : " + result);
 		
-//		int A;
-//		int B;
-//		int C;
-//		
-//		Scanner sc = new Scanner(System.in);
-//		System.out.print("A의 정수의 값을 입력하세요 : ");
-//		A = sc.nextInt();
-//		System.out.print("B의 정수의 값을 입력하세요 : ");
-//		B = sc.nextInt();
-//		
-//		C = A + B;
-//		
-//		System.out.println(A + " + " + B + " = " + C);
-		
-
 	}
 
 }

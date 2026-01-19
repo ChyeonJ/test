@@ -1,0 +1,15 @@
+package exam;
+
+public class Q162_ex1 {
+	public static void main(String[] args) {
+		// 3줄로만 작성할 것 오름차순 내림차순 구현
+		for(int i = 1; i <= 5; i++) {
+			System.out.println(i);
+		}
+		
+		for(int j = 5; j >= 1; j--) {
+			System.out.println(j);
+		}
+	}
+
+}
