@@ -17,7 +17,7 @@ public class Q2884 {
 		
 		// 강사님이 풀어주신 문제 스스로 생각해보기
 		int earlyMinutes = 45; //미리 알람을 맞출 시간.
-		int h = 12;
+		int h = 10;
 		int m = 30;
 		
 		int minutes = h * 60 + m; //현재 시간을 분으로 환산;

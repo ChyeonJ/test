@@ -10,7 +10,7 @@ public class Q8393 {
 		Scanner keyboard = new Scanner(System.in);
 		int n = keyboard.nextInt();
 		
-		int i = 1;			//왜 뺄 생각은 하지 못했을까,,,
+		int i = 1;
 		int sum = 1;
 		while (n > 1) {
 			sum += n;
@@ -18,14 +18,14 @@ public class Q8393 {
 		}
 		
 // 내가 한 방법		
-//		int hap = 0;
+		int hap = 0;
 		
-//		while (i <= n) {	// = 입력 받는 값 n -> i = 1 -> 조건식 1 < 3 (1,2) 이래서 =을 붙여야함. 3까지는 반복하니까.
-//			
-//			hap += i;
-//			i++;
-//			
-//		}
+		while (i <= n) {	// = 입력 받는 값 n -> i = 1 -> 조건식 1 < 3 (1,2) 이래서 =을 붙여야함. 3까지는 반복하니까.
+			
+			hap += i;
+			i++;
+			
+		}
 		System.out.println(sum);
 	}
 	

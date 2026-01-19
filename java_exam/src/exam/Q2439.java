@@ -11,25 +11,51 @@ public class Q2439 {
 //		Scanner sc = new Scanner(System.in);
 //		int n = sc.nextInt();
 		
-		final int startCount = 5;
+		
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		
 		int i = 1;
 		int j = 1;
 		
-		while(i < 6) {
-			
-			j = 1;
-			while(j <= startCount - i) {
-				System.out.print(" ");
-				j++;
+		while(n >= i) {	//시작할 떄 i이 5보다 크거나 같아야 한다.
+			j = 1;	//j를 1로 초기값을 설정한다.
+			while(j <= n-i) { // 1 4보다 작거나 같으면 멈춰라
+				System.out.print(" ");	// 공백 한 번 j 1증가 반복 4번
+				j++; // 1증가
 			}
-			
-			while(j <= startCount) {
-				System.out.print("*");
-				j++;
+			while(j <= n) { // 4이 5보다 작거나 같을 때 멈춰라
+				System.out.print("*"); // * 한 번 찍힌다.
+				j++;	// j 증가
 			}
-			System.out.println("");
 			i++;
+			System.out.println(" ");
 		}
+		
+		
+		
+		
+		
+		
+//		final int startCount = 5;
+//		int i = 1;
+//		int j = 1;
+//		
+//		while(i < 6) {
+//			
+//			j = 1;
+//			while(j <= startCount - i) {
+//				System.out.print(" ");
+//				j++;
+//			}
+//			
+//			while(j <= startCount) {
+//				System.out.print("*");
+//				j++;
+//			}
+//			System.out.println("");
+//			i++;
+//		}
 
 	}
 

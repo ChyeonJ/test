@@ -36,6 +36,7 @@ public class Q2525 {
 		
 		System.out.println(hour + " " + minute);
 		
+		
 //		if (totalTime >= 1440) {		>= 나는 이사이면 00시로 초기화 하는게 맞다고 생각해서 이상 기호를 씀
 //			hour = totalTime / 60;		1450 - 1440시 정수형 60으로 나눴을 떄 0시 10이 된다. 이해함.
 //			minute = totalTime % 60;
