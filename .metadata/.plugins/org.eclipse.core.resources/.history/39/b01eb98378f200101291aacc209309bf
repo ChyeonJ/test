@@ -1,0 +1,19 @@
+package exam;
+
+public class ArithmaticQuiz4 {
+
+	public static void main(String[] args) {
+
+		int subjectA = 100;
+		int subjectB = 80;
+		int subjectC = 95;
+		int subjectD = 68;
+		
+		int totalScore = subjectA + subjectB + subjectC + subjectD; // 모든 과목들 합
+		double average = 0; //평균점수
+		double score = totalScore; // 4.5 만점 기준 학점 계산. 소수점 이하 두라지 까지.
+									// (평균점수 -55) 에서 소수점 계산
+
+	}
+
+}

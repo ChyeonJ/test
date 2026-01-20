@@ -1,0 +1,21 @@
+package java_exam;
+
+public class Variable_test {
+
+	public static void main(String[] args) {
+		// 실습 1 : 정수 <-> 부동소수점의 변환 정수 -> 부동소수
+		int num = 10;
+		float fnum = num; //int num은 float fnum보다 작으니 묵시적 변환 가능
+		double dnum = num; // int num은 double dnum보다 작으니 묵시적 변환 가능
+		System.out.println(num); // 10
+		System.out.println(fnum); // 10.0
+		System.out.println(dnum); // 10.0
+		
+		// 실습 2 : 정수 <-> 부동소수점의 변환 부동소수 -> 정수
+		float fnum1 = 10.9f;
+		int num1 = (int) fnum1;
+		System.out.println(fnum1);
+		System.out.println(num);
+	}	
+
+}

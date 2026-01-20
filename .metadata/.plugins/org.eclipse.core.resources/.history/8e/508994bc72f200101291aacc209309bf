@@ -1,0 +1,24 @@
+package java_exam;
+
+public class ArithmaticOperator {
+
+	public static void main(String[] args) {
+		// 연산자
+		
+		int n = 0;
+		
+		System.out.println(n);	//0
+		
+		n++; // n = n + 1; , n += 1; 같은 의미
+		
+		System.out.println(n);	// 1
+		
+		System.out.println(n++); // System.out.println (n += 1); 결과는 = 1
+		
+		System.out.println(n); // 결과는 2 n에서 ++의 위치가 뒤에 있기에 연산을 먼저 출력 후 나중에 진행하기 때문
+		
+		System.out.println(++n);
+
+	}
+
+}

@@ -1,0 +1,24 @@
+package java_exam;
+
+public class CompareExam {
+
+	public static void main(String[] args) {
+		
+		int age = 10;
+		
+		// age가 10대인지 확인해본다.
+		// 10 <= age < 20
+		// 10대가 맞다면 true를 아니라면 false를 출력한다.
+		boolean ageTrue = 10 <= age && age < 20;
+		System.out.println(ageTrue);
+
+		
+		// age가 20대인지 확인해본다.
+		// 20 <= age < 30
+		// 20대가 맞다면 true를 아니라면 false를 출력한다.
+		boolean ageFalse = age < 30 && 20 <= age;
+		System.out.println(ageFalse);
+		
+	}
+
+}

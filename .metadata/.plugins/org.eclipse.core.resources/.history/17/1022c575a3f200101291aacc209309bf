@@ -1,0 +1,16 @@
+package java_exam;
+
+public class ifExam {
+
+	public static void main(String[] args) {
+		
+		int randomNumber = (int) (Math.random() * 100);
+		
+		while (true)
+		System.out.println(randomNumber);
+		
+		
+
+	}
+
+}

@@ -1,0 +1,35 @@
+package java_exam;
+
+public class ifExam {
+
+	public static void main(String[] args) {
+		
+		// 0.123132121321321 ==> 12.313212132121 ==> 12
+		int randomNumber = (int) (Math.random() * 100);
+		System.out.println(randomNumber);
+		
+		//randomNumber == 16 : "10범위 숫자가 나왔습니다"
+		//randomNumber == 36 : "30범위 숫자가 나왔습니다"
+		//randomNumber == 66 : "60범위 숫자가 나왔습니다"
+		//randomNumber == 6 : "0범위 숫자가 나왔습니다"
+		//randomNumber == 27 : "20범위 숫자가 나왔습니다"
+		//randomNumber == 55 : "50범위 숫자가 나왔습니다"
+		
+		//if를 사용하지 않고 풀어도 되는 문제
+		int radix = randomNumber / 10 * 10;
+		System.out.println(radix + "범위의 숫자가 나왔습니다.");
+		
+		//if를 사용하여 풀어낸 문제 하지만 아래 코드는 경우의 수가 1가지인 문제가 1개씩 있다.
+		if (randomNumber >= 10  && randomNumber < 20) {
+			System.out.println("10 범위의 숫자가 나왔습니다.");
+		}
+		if (randomNumber >= 20 && randomNumber < 30) {
+			System.out.println("20 범위의 숫자가 나왔습니다.");
+		}
+		if (randomNumber >= 30 && randomNumber < 40) {
+			System.out.println("30 범위의 숫자가 나왔습니다.");
+		}
+
+	}
+
+}

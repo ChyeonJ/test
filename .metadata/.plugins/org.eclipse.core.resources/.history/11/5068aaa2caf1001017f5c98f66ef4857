@@ -1,0 +1,15 @@
+package exam;
+
+public class Q10171 {
+
+	public static void main(String[] args) {
+		// 실습2. https://www.acmicpc.net/problem/10171 고양이 그리기
+		
+		System.out.println("\\    /\\");
+		System.out.println(" )  ( ')");
+		
+
+
+	}
+
+}
