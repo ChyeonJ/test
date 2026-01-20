@@ -3,6 +3,18 @@ package exam;
 import java.io.File;
 
 public class Q134 {
+	
+	public static int getFlightFare(int age) { {
+		if (age >= 19) {
+			return 300_000;
+		}
+		else {
+			return 100_000;
+		}
+	}
+		
+	}
+	
 	public static void main(String[] args) {
 		// 3인 가족이 100만원으로 비행기를 타고 편도 여행을 가려합니다.
 		// 부모님의 나이는 각각 40, 36세입니다.
@@ -25,26 +37,33 @@ public class Q134 {
 		
 		// case 1. 비행 요금을 계산.
 		int flightFare = 0;
-		if (father >= 19) {
-			flightFare += adultOneWayFlighFare;
-		}
-		else {
-			flightFare += kidOneWayFlightFare;
-		}
-		if (mother >= 19) {
-			flightFare += adultOneWayFlighFare;
-		}
-		else {
-			flightFare += kidOneWayFlightFare;
-		}
+		// 메소드를 사용하여 Case.1을 줄임
+		flightFare += getFlightFare(father);
+		flightFare += getFlightFare(mother);
+		flightFare += getFlightFare(daugther);
 		
-		if (daugther >= 19) {
-			flightFare += adultOneWayFlighFare;
-		}
-		else {
-			flightFare += kidOneWayFlightFare;
-		}
 		
+		// 메소드를 사용하여 바꿈
+//		if (father >= 19) {
+//			flightFare += adultOneWayFlighFare;
+//		}
+//		else {
+//			flightFare += kidOneWayFlightFare;
+//		}
+//		if (mother >= 19) {
+//			flightFare += adultOneWayFlighFare;
+//		}
+//		else {
+//			flightFare += kidOneWayFlightFare;
+//		}
+//		
+//		if (daugther >= 19) {
+//			flightFare += adultOneWayFlighFare;
+//		}
+//		else {
+//			flightFare += kidOneWayFlightFare;
+//		}
+//		
 		if (flightFare >= money) {
 			System.out.println("여행 가자!");
 		}
