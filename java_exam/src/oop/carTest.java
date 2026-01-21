@@ -2,7 +2,7 @@ package oop;
 /**
  * 
  */
-public class carTest {
+public class CarTest {
 
 	public static void main(String[] args) {
 		// new를 사용할 떄 Car => new Car(); 같은 양식임
