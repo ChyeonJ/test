@@ -6,7 +6,8 @@ public class SellerTest {
 
 		Seller seller = new Seller();
 		
-		seller.itemCount = 10;
+		seller.itemPrice = 1_000;
+		seller.itemCount = 110;
 		seller.sale = 8;
 		seller.sellerTotal();
 

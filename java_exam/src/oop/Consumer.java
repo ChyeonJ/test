@@ -23,47 +23,51 @@ package oop;
  */
 public class Consumer {
 	
-	int itemPrice = 1_000;
+	int itemPrice;
 	int itemCount; 
-	int itemWeight = 500; 
+	int itemWeight;
 	int consumerMoney;
 	int basketEndWeight;
 	
+	int basketCount;
 	int basketWeight; 
-	int itemBuyWeight;
-	int itemTotalMoney;
-	boolean moneyCheck;
-	boolean weightCheck;
 	
-	public void beforMoneyCheck() {
-		itemTotalMoney = itemPrice * itemCount;
-		moneyCheck = consumerMoney - itemPrice * itemCount >= itemPrice;
-		
-	}
 	
-	public void beforeWeightCheck() {
-		itemBuyWeight = itemWeight * itemCount;
-		weightCheck = basketWeight + itemBuyWeight <= basketEndWeight;
-		
-	}
+	
+//	boolean moneyCheck;
+//	boolean weightCheck;
+//	
+//	public void beforMoneyCheck() {
+//
+//		moneyCheck = consumerMoney - itemPrice * itemCount >= itemPrice;
+//		
+//	}
+//	
+//	public void beforeWeightCheck() {
+//		
+//		weightCheck = basketWeight + itemBuyWeight <= basketEndWeight;
+//		
+//	}
 	
 	
 	public void consumerTotal() {
 		
-		if(moneyCheck) {
-			if(weightCheck) {
-				consumerMoney -= itemTotalMoney;
-				basketWeight += itemBuyWeight;
-			}else {
-				System.out.println("더 이상 장바구니를 들 수 없습니다.");
-				return;
-			}
-		}
-		else {
+		int itemTotalMoney = itemPrice * itemCount;
+		int itemBuyWeight = itemWeight * itemCount;
+		
+		if(itemTotalMoney > consumerMoney) {
 			System.out.println("돈이 부족합니다.");
-			return;
 		}
-		System.out.println("구매한 상품 개수 : " + itemCount + ", 장바구니의 무게 : " + 
+
+		if(itemBuyWeight < basketEndWeight) {
+			consumerMoney -= itemTotalMoney;
+			basketWeight += itemBuyWeight;
+			basketCount += itemCount;
+		}else {
+			System.out.println("더 이상 장바구니를 들 수 없습니다.");
+		}
+	
+		System.out.println("구매한 상품 개수 : " + basketCount + ", 장바구니의 무게 : " + 
 		basketWeight + ", 지갑의 돈 : " + consumerMoney);
 	}
 

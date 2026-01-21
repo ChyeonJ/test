@@ -6,12 +6,15 @@ public class ConsumerTest {
 		
 		Consumer con = new Consumer();
 		
-		con.itemCount = 5;
-		con.basketEndWeight = 100000;
-		con.consumerMoney = 10000;
+		con.itemPrice = 1_000;
+		con.itemWeight = 500;
 		
-		con.beforMoneyCheck();
-		con.beforeWeightCheck();
+		con.itemCount = 100;
+		con.basketEndWeight = 10_000;
+		con.consumerMoney = 10_000;
+		
+//		con.beforMoneyCheck();
+//		con.beforeWeightCheck();
 		con.consumerTotal();
 		
 	}

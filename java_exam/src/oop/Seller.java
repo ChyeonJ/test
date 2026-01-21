@@ -21,22 +21,45 @@ package oop;
 public class Seller {
 	
 	//멤버변수
-	int itemPrice = 1_000;
+	/**
+	 * <pre>
+	 * 상품의 가격
+	 * </pre>
+	 */
+	int itemPrice;
+	/**
+	 * <pre>
+	 * 재고
+	 * </pre>
+	 */
 	int itemCount;
+	/**
+	 * <pre>
+	 * 판매 개수
+	 * </pre>
+	 */
 	int sale;
+	/**
+	 * <pre>
+	 * 판매자의 자본금
+	 * </pre>
+	 */
 	int sellerMoney;
 	
+	
+	
 	public void sellerTotal() {
-		int totalItem = itemCount - sale;
-			if(totalItem <= 0 ) {
+			
+			int totalItem = itemCount - sale;
+			
+			if(totalItem < 0 ) {
 				System.out.println("품절되었습니다.");
-				itemCount = 0;
+				totalItem = 0; 
 			}else if(totalItem >= 0){
-				itemCount -= sale;
 				itemPrice = itemPrice * sale;
 				sellerMoney += itemPrice;
 			}
-		System.out.println("재고 : " + itemCount + ", 자본금 : " + sellerMoney);
+		System.out.println("재고 : " + totalItem + ", 자본금 : " + sellerMoney);
 	}
 	
 
