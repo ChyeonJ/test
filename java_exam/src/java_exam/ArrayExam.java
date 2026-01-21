@@ -22,8 +22,7 @@ public class ArrayExam {
 		
 		
 		
-		// 배열 선언 1번째 방법
-		int[] scoreArray = new int[7];
+
 //		scoreArray[0] = 18;
 //		scoreArray[1] = 22;
 //		scoreArray[2] = 55;
@@ -54,7 +53,9 @@ public class ArrayExam {
 		 *  - 존재하면 다시 2번으로 돌아간다.
 		 *  3. 배열에 채워진 숫자들을 출력한다.
 		 */
-		
+		// 배열 선언 1번째 방법
+		//배열 안에 중복되지 않는 값으로 배열 할당하기
+		int[] scoreArray = new int[7];
 		int count = 0;
 		int random = 0;
 		boolean existsNumber = false;
@@ -74,7 +75,7 @@ public class ArrayExam {
 				scoreArray[count] = random;
 				count++;
 			}
-			
+			//출력
 			for (int i = 0; i < scoreArray.length; i++) {
 				System.out.print(scoreArray[i] + " ");
 			}
