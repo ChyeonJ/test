@@ -26,7 +26,7 @@ public class Seller {
 	 * 상품의 가격
 	 * </pre>
 	 */
-	final int itemPrice = 1_000;
+	final int ITEM_PRICE = 1_000; // => 상수는 대문자 언더바로 나눔
 	/**
 	 * <pre>
 	 * 재고
@@ -62,12 +62,12 @@ public class Seller {
 			if(totalItem < 0 ) {
 				System.out.println("품절되었습니다.");
 				System.out.println(sale + totalItem);
-				totalPrice = itemPrice * (sale + totalItem);
+				totalPrice = ITEM_PRICE * (sale + totalItem);
 				System.out.println(totalPrice);
 				sellerMoney += totalPrice;
 				totalItem = 0; 	//여기서 0을 처리하기 전에 itemCount - sale로 팔 수 있는 수량 개선 해야함 => 헤결 => 음수가 나와도 그전에 + totalItem해서 값이 계산 되게 만듬 음수를 빼려면 + 해야함
 			}else if(totalItem >= 0){
-				totalPrice = itemPrice * sale;	//다음 구매자는 itemPrice 가격이 달라짐 해결 => 멤버 변수 final 추가
+				totalPrice = ITEM_PRICE * sale;	//다음 구매자는 itemPrice 가격이 달라짐 해결 => 멤버 변수 final 추가
 				sellerMoney += totalPrice; // 자본금만 오르는 상황임 재고를 바꿔야함?
 				
 			}
