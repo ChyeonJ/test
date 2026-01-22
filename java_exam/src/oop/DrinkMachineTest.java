@@ -17,7 +17,7 @@ public class DrinkMachineTest {
 		int result = da.orderDrinK(4, 3);
 		System.out.println("첫번째 결과 : "  + result);
 		
-		result = da.orderDrinK(0, 5);
+		result = da.orderDrinK(0, 15);
 		System.out.println("두번째 결과 : "  + result);
 		
 		result = da.orderDrinK(1, 17);

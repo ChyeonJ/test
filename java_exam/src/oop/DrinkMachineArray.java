@@ -40,7 +40,7 @@ public class DrinkMachineArray {
 		
 		int totalStock = this.drinkM[count].stock - stock;
 		
-		if(stock == 0 || totalStock > this.drinkM[count].stock) {
+		if(stock == 0 || totalStock >= this.drinkM[count].stock) {
 			System.out.println("상품이 품절되었습니다.");
 			totalStock = 0;
 			return 0;

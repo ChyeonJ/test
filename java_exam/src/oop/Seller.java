@@ -26,7 +26,7 @@ public class Seller {
 	 * 상품의 가격
 	 * </pre>
 	 */
-	int itemPrice;
+	final int itemPrice = 1_000;
 	/**
 	 * <pre>
 	 * 재고
@@ -35,37 +35,37 @@ public class Seller {
 	int itemCount;
 	/**
 	 * <pre>
-	 * 판매 개수
-	 * </pre>
-	 */
-	int sale; // final int sale;
-	/**
-	 * <pre>
 	 * 판매자의 자본금
 	 * </pre>
 	 */
 	int sellerMoney;
 	
-	//생성자 생성 => publid 클래스 이름
-	public Seller(int itemCount, int sale) {
+	//생성자 생성 => public 클래스 이름
+	/**
+	 * 
+	 * @param itemCount 재고
+	 */
+	public Seller(int itemCount) {
 		this.itemCount = itemCount;
-		this.sale = sale;
 		
 	}
 	
 	
-	
-	public void sellerTotal() {
+	/**
+	 * 판매자
+	 * @param sale
+	 */
+	public void sellerTotal(int sale) { //판매 개수 
 			
-			int totalItem = itemCount - sale;	//여기서 음수로 받는데 이거 고쳐야함.
+			int totalItem = itemCount - sale;	//여기서 음수로 받는데 이거 고쳐야함. 안고쳐도 될듯 = >어차피 음수로 나오면 if에서 걸러지고 0으로 초기화 됨
 			
 			if(totalItem < 0 ) {
 				System.out.println("품절되었습니다.");
 				totalItem = 0; 	//여기서 0을 처리하기 전에 itemCount - sale로 팔 수 있는 수량 개선 해야함
 			}else if(totalItem >= 0){
-				itemPrice = itemPrice * sale;	//다음 구매자는 itemPrice 가격이 달라짐
-				sellerMoney += itemPrice; // 자본금만 오르는 상황임 재고를 바꿔야함?
-						
+				int totalPrice = itemPrice * sale;	//다음 구매자는 itemPrice 가격이 달라짐 해결 => 멤버 변수 final 추가
+				sellerMoney += totalPrice; // 자본금만 오르는 상황임 재고를 바꿔야함?
+				
 			}
 		System.out.println("재고 : " + totalItem + ", 자본금 : " + sellerMoney);
 	}
