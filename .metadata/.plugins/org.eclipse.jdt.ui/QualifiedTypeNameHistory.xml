@@ -14,6 +14,20 @@
     <fullyQualifiedTypeName name="javax.swing.text.DefaultEditorKit.InsertBreakAction"/>
     <fullyQualifiedTypeName name="java.awt.desktop.ScreenSleepEvent"/>
     <fullyQualifiedTypeName name="java.sql.ResultSetMetaData"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="oop.FoodStoreApp"/>
+    <fullyQualifiedTypeName name="oop.Student"/>
+    <fullyQualifiedTypeName name="org.jcp.xml.dsig.internal.dom.DOMSubTreeData"/>
+    <fullyQualifiedTypeName name="oop.CraneGameMachine"/>
+    <fullyQualifiedTypeName name="oop.Seller"/>
+    <fullyQualifiedTypeName name="java.lang.Character"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="oop.Consumer"/>
+    <fullyQualifiedTypeName name="exam.HomeWork_260119"/>
+    <fullyQualifiedTypeName name="oop.CoffeeShop"/>
+    <fullyQualifiedTypeName name="oop.Coffee"/>
+    <fullyQualifiedTypeName name="java.lang.Boolean"/>
+    <fullyQualifiedTypeName name="oop.BeverageMachine"/>
+    <fullyQualifiedTypeName name="oop.DrinkMachine"/>
+    <fullyQualifiedTypeName name="oop.DrinkMachineArray"/>
 </qualifiedTypeNameHistroy>

@@ -4,14 +4,14 @@ public class ConsumerTest {
 
 	public static void main(String[] args) {
 		
-		Consumer con = new Consumer();
+		Consumer con = new Consumer(10, 10_000, 10_00);
 		
 		con.itemPrice = 1_000;
 		con.itemWeight = 500;
 		
-		con.itemCount = 100;
-		con.basketEndWeight = 10_000;
-		con.consumerMoney = 10_000;
+//		con.itemCount = 10;					생성자 생성
+//		con.basketEndWeight = 10_000;
+//		con.consumerMoney = 10_00;
 		
 //		con.beforMoneyCheck();
 //		con.beforeWeightCheck();

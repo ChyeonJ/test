@@ -30,6 +30,20 @@ public class Car {
 	 * </pre>
 	 */
 	int speed;
+	//차의 이름 - 9장 생성자
+	String name;
+	
+//	public Car() { // 기본생성자
+//		
+//	}
+	
+	public Car(String name) {
+		//멤버변수 <--- 파라미터
+		this.name = name;
+	}
+	
+	
+	
 	
 	//인스턴스 메소드. 만들어보자~! 인스턴스 메소드는 static 사용하지 않음
 	/**

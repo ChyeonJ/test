@@ -23,15 +23,29 @@ package oop;
  */
 public class Consumer {
 	
-	int itemPrice;
+	int itemPrice;	//final int ITEM_PRICE;
+	int itemWeight; //final int ITEM_WEIGHT;
 	int itemCount; 
-	int itemWeight;
 	int consumerMoney;
 	int basketEndWeight;
 	
 	int basketCount;
 	int basketWeight; 
 	
+	//생성자 생성
+	/**
+	 * 
+	 * @param itemCount 재고
+	 * @param consumerMoney 돈
+	 * @param basketEndWeight 장바구니 무게
+	 */
+	public Consumer(int itemCount, int consumerMoney, int basketEndWeight) {
+		
+		this.itemCount = itemCount;
+		this.consumerMoney = consumerMoney;
+		this.basketEndWeight = basketEndWeight;
+		
+	}
 	
 	
 //	boolean moneyCheck;
@@ -52,11 +66,14 @@ public class Consumer {
 	
 	public void consumerTotal() {
 		
+		// beforeMoney, beforeWeightCheck을 메소드 호출을 해서 내가 의도한 바와 같이 true, false값을 쓸 수 있음
+		
 		int itemTotalMoney = itemPrice * itemCount;
 		int itemBuyWeight = itemWeight * itemCount;
 		
 		if(itemTotalMoney > consumerMoney) {
 			System.out.println("돈이 부족합니다.");
+			return;
 		}
 
 		if(itemBuyWeight < basketEndWeight) {

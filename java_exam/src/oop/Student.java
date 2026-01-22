@@ -34,7 +34,8 @@ public class Student {
 	 * </pre>
 	 */
 	public double getAverage() {
-		return (java + python + cpp + (double)csharp) / 4 / 10;
+		int resultAverage = (int) (getSumAllScores() / 4.0 * 100);
+		return resultAverage / 100.0;
 	}
 	
 	/**

@@ -6,7 +6,7 @@ public class CarTest {
 
 	public static void main(String[] args) {
 		// new를 사용할 떄 Car => new Car(); 같은 양식임
-		Car kona = new Car();	//new Car() => 클래스를 (인스턴스화, 객체화)로 만들어라
+		Car kona = new Car("KONA");	//new Car() => 클래스를 (인스턴스화, 객체화)로 만들어라
 								// 인스턴스화, 객체화가 될 떄 class의 기본 값들을 알아서 할당 
 								// 시켜줌 => 기본값 할당 
 								//정수 : 0, 실수 : 0.0, 불린 : false, char : 0
@@ -29,7 +29,7 @@ public class CarTest {
 		
 		/* ----------------------------------------------- */
 		
-		Car carnibal = new Car();
+		Car carnibal = new Car("Carnival");
 		System.out.println(carnibal);
 		
 		carnibal.pressGasolinPedal(200);
