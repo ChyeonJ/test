@@ -38,7 +38,7 @@ public class Seller {
 	 * 판매자의 자본금
 	 * </pre>
 	 */
-	int sellerMoney;
+	int sellerMoney = 0;
 	
 	//생성자 생성 => public 클래스 이름
 	/**
@@ -56,14 +56,18 @@ public class Seller {
 	 * @param sale
 	 */
 	public void sellerTotal(int sale) { //판매 개수 
-			
 			int totalItem = itemCount - sale;	//여기서 음수로 받는데 이거 고쳐야함. 안고쳐도 될듯 = >어차피 음수로 나오면 if에서 걸러지고 0으로 초기화 됨
+			int totalPrice;
 			
 			if(totalItem < 0 ) {
 				System.out.println("품절되었습니다.");
-				totalItem = 0; 	//여기서 0을 처리하기 전에 itemCount - sale로 팔 수 있는 수량 개선 해야함
+				System.out.println(sale + totalItem);
+				totalPrice = itemPrice * (sale + totalItem);
+				System.out.println(totalPrice);
+				sellerMoney += totalPrice;
+				totalItem = 0; 	//여기서 0을 처리하기 전에 itemCount - sale로 팔 수 있는 수량 개선 해야함 => 헤결 => 음수가 나와도 그전에 + totalItem해서 값이 계산 되게 만듬 음수를 빼려면 + 해야함
 			}else if(totalItem >= 0){
-				int totalPrice = itemPrice * sale;	//다음 구매자는 itemPrice 가격이 달라짐 해결 => 멤버 변수 final 추가
+				totalPrice = itemPrice * sale;	//다음 구매자는 itemPrice 가격이 달라짐 해결 => 멤버 변수 final 추가
 				sellerMoney += totalPrice; // 자본금만 오르는 상황임 재고를 바꿔야함?
 				
 			}
