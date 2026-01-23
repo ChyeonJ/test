@@ -31,10 +31,4 @@ public class Member {
 		System.out.println("작성자명: " + this.name);
 		
 	}
-	
-	
-	
-	
-	
-	
 }
