@@ -1,0 +1,57 @@
+package com.ktdsuniversity.edu.restaurant;
+
+import com.ktdsuniversity.edu.restaurant.customer.Customer;
+import com.ktdsuniversity.edu.restaurant.menu.RestaurantMenu;
+import com.ktdsuniversity.edu.restaurant.restaurant.Restaurant;
+
+public class RestarurantTest {
+	
+	public static void main(String[] args) {
+	
+		RestaurantMenu rest1 = new RestaurantMenu("감자탕", 27000, 0, 500, 120);
+		RestaurantMenu rest2 = new RestaurantMenu("김치찌개", 14000, 0, 500, 230);
+		RestaurantMenu rest3 = new RestaurantMenu("소주", 5000, 16.5d, 0, 10);
+		RestaurantMenu rest4 = new RestaurantMenu("맥주", 6000, 5.5d, 0, 100);
+		
+		RestaurantMenu rest5 = new RestaurantMenu("순대국", 5000, 0, 500, 120);
+		RestaurantMenu rest6 = new RestaurantMenu("머릿고기", 24000, 0, 1000, 230);
+		RestaurantMenu rest7 = new RestaurantMenu("양주", 60000, 55.6d, 0, 100);
+		RestaurantMenu rest8 = new RestaurantMenu("보드카", 6000, 78.9d, 0, 100);
+		
+		
+		RestaurantMenu[] restPotato = new RestaurantMenu[4];
+		restPotato[0] = rest1;
+		restPotato[1] = rest2;
+		restPotato[2] = rest3;
+		restPotato[3] = rest4;
+		
+		RestaurantMenu[] restPigSoup = new RestaurantMenu[4];
+		restPigSoup[0] = rest5;
+		restPigSoup[1] = rest6;
+		restPigSoup[2] = rest7;
+		restPigSoup[3] = rest8;
+		
+		Restaurant restAdmin = new Restaurant("감자탕집", 16.0d, 700, 0);
+		Restaurant restAdmin1 = new Restaurant("순대국집", 13.0d, 1000, 0);
+		
+		Restaurant[] restA = new Restaurant[3];
+		restA[0] = restAdmin;
+		restA[1] = restAdmin1;
+		
+		Customer cs1 = new Customer("고객1", 1.0d, 100, 100_000);
+		Customer cs2 = new Customer("고객2", 0.0d, 0, 100);
+		
+		Customer[] cs = new Customer[2];
+		cs[0] = cs1;
+		cs[1] = cs2;
+		
+		restAdmin.order(cs1, rest3);
+		restAdmin.order(cs1, rest1);
+		restAdmin.order(cs1, rest1);
+		restAdmin.order(cs1, rest1);
+		restAdmin.order(cs1, rest1);
+
+		
+	}
+
+}

@@ -1,0 +1,111 @@
+package com.ktdsuniversity.edu.restaurant.restaurant;
+
+import com.ktdsuniversity.edu.restaurant.customer.Customer;
+import com.ktdsuniversity.edu.restaurant.menu.RestaurantMenu;
+
+public class Restaurant {
+	
+	private String name;
+	private double drunk;
+	private int full;
+	private int money;
+	
+	private RestaurantMenu[] menu;
+	private Customer[] cs;
+	
+	public Restaurant(String name, double drunk, int full, int money) {
+		this.name = name;
+		this.drunk = drunk;
+		this.full = full;
+		this.money = money;
+	}
+
+	
+	public RestaurantMenu[] getMenu() {
+		return menu;
+	}
+	public void setMenu(RestaurantMenu[] menu) {
+		this.menu = menu;
+	}
+	public Customer[] getCs() {
+		return cs;
+	}
+	public void setCs(Customer[] cs) {
+		this.cs = cs;
+	}
+
+	public String getName() {
+		return name;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	public double getDrunk() {
+		return drunk;
+	}
+	public void setDrunk(double drunk) {
+		this.drunk = drunk;
+	}
+	public int getFull() {
+		return full;
+	}
+	public void setFull(int full) {
+		this.full = full;
+	}
+	public int getMoney() {
+		return money;
+	}
+	public void setMoney(int money) {
+		this.money = money;
+	}
+	
+	public boolean fullCheck(Customer cs) {
+		return cs.getCustomerFull() >= this.full;
+	}
+	
+	public boolean drunkCheck(Customer cs) {
+		return cs.getCustomerDrunk() >= this.drunk;
+	}
+	
+	public void order(Customer cs, RestaurantMenu rest) {
+		//고객1이 주문해
+		//돈 있어?
+		if (cs.getCoustomerMoney() < rest.getProductPrice()) {
+			System.out.println("돈없음 잘가아~");
+			return;
+		}		//재고 있어?
+		else if(rest.getStock() <= 0) {
+			System.out.println("재고 없음");
+			return;
+		}		//취했어?
+		else if(drunkCheck(cs)) {
+			System.out.println("너무 취했다 가라~");
+			return;
+		}		//배불러?
+		else if(fullCheck(cs)) {
+			System.out.println("배부르네 가라~");
+			return;
+		}
+		else {		//ㅇㅋ 주문해 		//재고 빠지고, 고객 돈 나가고, 내 통장에 돈 들어옴
+			cs.setCoustomerMoney(cs.getCoustomerMoney() - rest.getProductPrice());
+			this.money += rest.getProductPrice();
+			
+			rest.setStock(rest.getStock() - 1);
+			if(rest.getAlcohol() > 0) {
+			cs.setCustomerDrunk(cs.getCustomerDrunk() + rest.getAlcohol() / 10);
+			}
+			else if(rest.getProductWeight() > 0) {
+				cs.setCustomerFull(cs.getCustomerFull() + rest.getProductWeight());
+			}
+			System.out.println("주문성공");
+			System.out.println(cs.getCoustomerMoney() + "돈 이만큼 있어");
+			System.out.println(cs.getCustomerDrunk() + "이만큼 취했어");
+			System.out.println(cs.getCustomerFull() + "이만큼 배불러");
+			System.out.println(cs.getCustomerName() + "내 이름은");
+			
+		}
+	}
+	
+	
+}
