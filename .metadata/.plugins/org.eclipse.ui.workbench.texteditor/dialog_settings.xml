@@ -4,6 +4,8 @@
 		<item key="replaceBarOpen" value="false"/>
 		<item key="selection" value="drinks"/>
 		<list key="findhistory">
+			<item value="set"/>
+			<item value="se"/>
 			<item value="drinks"/>
 		</list>
 	</section>
