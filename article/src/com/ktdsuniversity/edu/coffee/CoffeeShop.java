@@ -13,6 +13,16 @@ public class CoffeeShop {
 	 */
 	private Coffee ice;
 	
+	//생성자 오버로딩
+	public CoffeeShop() {
+		//this.hot = new Coffee("기본 아메리카노", 1500, 30);
+		//this.ice = new Coffee("아이스 아메리카노", 1500, 50);
+		//여기서 생성자를 직접 호출할 수 있는 방법
+		//Coffee인스턴스 두개를 생성하면 자동으로 밑에 있는 CoffeeShop의 값을 사용하게 됨
+		this(new Coffee("기본 아메리카노", 1500, 30),
+				new Coffee("아이스 아메리카노", 1500, 50));
+	}
+	
 	public CoffeeShop(Coffee hot, Coffee ice) {
 		this.hot = hot;
 		this.ice = ice;
@@ -33,6 +43,21 @@ public class CoffeeShop {
 	public void setIce(Coffee ice) {
 		this.ice = ice;
 	}
+	
+//	//메소드 오버로딩
+	public void orderCoffee(String menu) {
+		this.orderCoffee(menu, 1);
+		//return price;
+	}
+	/**
+	 * 가장 첫번째 메뉴를 한개 주문한다.
+	 * @return
+	 */
+	public void orderCoffee() {
+		this.orderCoffee("아메리카노 (Hot)");
+		//return price;
+	}
+	
 	
 	/**
 	 * 주문하는데 재고보다 주문수량 보다 모자라면 안판다.
