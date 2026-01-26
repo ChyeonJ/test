@@ -44,7 +44,7 @@ public class CoffeeShop {
 		this.ice = ice;
 	}
 	
-//	//메소드 오버로딩
+	//메소드 오버로딩
 	public void orderCoffee(String menu) {
 		this.orderCoffee(menu, 1);
 		//return price;

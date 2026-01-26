@@ -6,6 +6,8 @@ public class Q10809x {
 		
 		String s = "asdqwesdfwqe";
 		
+		//진짜 모르겠습니다.
+		
 	}
 
 }

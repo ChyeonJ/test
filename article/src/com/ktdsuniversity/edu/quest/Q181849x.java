@@ -9,8 +9,9 @@ public class Q181849x {
 			int num = Integer.parseInt(String.valueOf(num_str.charAt(i)));
 			add += num;
 			System.out.println(add);
-			
 		}
+		
+		//스스로 풀지못함
 
 	}
 
