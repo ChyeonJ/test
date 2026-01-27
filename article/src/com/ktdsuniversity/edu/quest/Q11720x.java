@@ -69,9 +69,6 @@ public class Q11720x {
 		case1(numString);
 		
 		case2(numString);
-		
-		
-
 	}
 
 }

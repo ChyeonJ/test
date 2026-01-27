@@ -7,27 +7,9 @@ public class Q2908X {
 
 	public static void main(String[] args) {
 		
-		String a = "734";
-		String b = "893";
+		String a = "734 893";
 		
-		String ans = "";
-		for(int i = 2; i >=0; i--) {
-			if (a.charAt(i) > b.charAt(i)) {
-				ans = a;
-				break;
-			}
-			else if (a.charAt(i) < b.charAt(i)) {
-				ans = b;
-				break;
-			}
-		}
-		
-		for(int i = 2; i >=0; i--) {
-			System.out.print(ans.charAt(i));
-		}
 		
 	}
-	
-	//풀다가 포기했습니다..
 
 }

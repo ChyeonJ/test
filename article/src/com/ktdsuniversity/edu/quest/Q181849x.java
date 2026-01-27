@@ -6,12 +6,10 @@ public class Q181849x {
 		String num_str = "123456789";
 		int add = 0;
 		for(int i = 0; i < num_str.length(); i++) {
-			int num = Integer.parseInt(String.valueOf(num_str.charAt(i)));
+			int num = Integer.parseInt(num_str.charAt(i) + "");
 			add += num;
 			System.out.println(add);
 		}
-		
-		//스스로 풀지못함
 
 	}
 
