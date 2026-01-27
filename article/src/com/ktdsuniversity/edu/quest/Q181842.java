@@ -16,5 +16,4 @@ public class Q181842 {
 		System.out.println(a);
 
 	}
-
 }

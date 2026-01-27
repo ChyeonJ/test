@@ -1,6 +1,5 @@
 package com.ktdsuniversity.edu.quest;
 
-import java.net.Socket;
 
 public class Q181875X {
 	
@@ -24,7 +23,6 @@ public class Q181875X {
 		
 		System.out.println(solution(strArr1));
 		
-		//스스로 풀지못함
 	}
 
 }

@@ -5,8 +5,20 @@ public class Q10809x {
 	public static void main(String[] args) {
 		
 		String s = "asdqwesdfwqe";
+		String alpha = "abcdefghijklmnopqrstuvwxyz";
 		
 		//진짜 모르겠습니다.
+		String c = "";
+		int index = 0;
+		String result = "";
+		for (int i = 0; i < alpha.length(); i++) {
+			c = alpha.charAt(i) + "";
+			index = s.indexOf(c);
+			result += " " + index;
+		}
+		
+		System.out.println(result);
+			
 		
 	}
 
