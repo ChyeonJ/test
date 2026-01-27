@@ -11,17 +11,18 @@ public class Q5597 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		int[] numArray = new int[29];
+		//int[] numArray = new int[29];
+		int[] numArray = {3, 1, 4, 5, 7, 9, 6, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30};
 		int num = 0;
 		int temp = 0;
 		// 배열 입력 완료
-		for(int i = 0; i < numArray.length - 1; i++) {
-			System.out.print("입력 하시오 " );
-			numArray[i] += sc.nextInt();
-		}
+//		for(int i = 0; i < numArray.length - 1; i++) {
+//			System.out.print("입력 하시오 " );
+//			numArray[i] += sc.nextInt();
+//		}
 		//정렬 완료
-		for(int i = 0; i < numArray.length; i++) {
-			for(int j = 1; j < numArray.length; j++) {
+		for(int i = 0; i < numArray.length -1; i++) {
+			for(int j = 1; j < numArray.length-1; j++) {
 				if(numArray[i] > numArray[j]) {
 					temp = numArray[i];
 					numArray[i] = numArray[j];
@@ -29,16 +30,17 @@ public class Q5597 {
 				}
 			}
 		}
-		
-		for(int i = 0; i < numArray.length; i++) {
-			if(numArray[i] == i) {
-				
-			}
-			else {
-				System.out.println(i);
+		//과제를 내지 않은 사람 찾기
+		int[] miss = new int[numArray.length];
+		int missIndex = 0;
+		for(int i = 0; i < numArray.length-1; i++) {
+			if(numArray[i] != numArray[i + 1] - 1) {
+				miss[missIndex++] = numArray[i] + 1;
 			}
 		}
 		
+		System.out.println(miss[0]);
+		System.out.println(miss[1]);
 		
 	}
 
