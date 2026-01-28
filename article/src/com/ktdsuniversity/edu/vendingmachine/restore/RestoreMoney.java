@@ -1,5 +1,5 @@
 package com.ktdsuniversity.edu.vendingmachine.restore;
-
+//상속 변경
 import com.ktdsuniversity.edu.vendingmachine.item.DrinkMachine;
 import com.ktdsuniversity.edu.vendingmachine.machine.DrinkMachineArray;
 

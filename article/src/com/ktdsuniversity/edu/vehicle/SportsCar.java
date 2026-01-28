@@ -30,7 +30,7 @@ public class SportsCar extends Vehicle {
 	
 	
 	public void turboSet(Vehicle car) {
-		if(car.getTurnStatus() != this.turboMode) {
+		if(car.getTurnStatus() == this.turboMode) {
 			System.out.println("터보 모드 활성");
 			setTurboMode(true);
 		}
@@ -38,9 +38,5 @@ public class SportsCar extends Vehicle {
 			System.out.println("시동부터 켜세요");
 		}
 	}
-	
-	
-	
-	
 
 }

@@ -7,6 +7,7 @@ import com.ktdsuniversity.edu.vendingmachine.item.DrinkMachine;	//패키지 추�
  */
 public class DrinkMachineArray {
 	
+	//상속 변경
 	private int safe;
 	private int inputMoney;	//쌓이거나 쌓이지 않거나 때문에 변수 두개 추가
 	
@@ -19,11 +20,11 @@ public class DrinkMachineArray {
 		this.drinkM[2] = index3;
 		this.drinkM[3] = index4;
 	}
-	
+	//상속 변경
 	public int getSafe() {	//게터 추가
 		return safe;
 	}
-
+	//상속 변경
 	public int getInputMoney() { //게터 추가
 		return inputMoney;
 	}
@@ -48,7 +49,7 @@ public class DrinkMachineArray {
 	 */
 	//주문하기(제품 번호, 주문수량): 구매금액(int)
 	public int orderDrinK(int count, int stock, int inputMoney) {
-		
+		//상속 변경
 		this.inputMoney = inputMoney;	//사용자가 넣은 돈을 넣어줌
 		
 		// 이상한 숫자를 넣어도 오류 출력 해야함
@@ -71,6 +72,7 @@ public class DrinkMachineArray {
 			drinkMachine.setStock(totalStock);	// 주문을하면 주문 수량만큼 자판기 음료수의 재고가 감소
 			//this.drinkM[count].stock = totalStock;	// 주문을하면 주문 수량만큼 자판기 음료수의 재고가 감소
 			
+			//상속 변경
 			this.safe += stock * drinkMachine.getPrice();	//돈통에 주문한 금액만큼 넣어줌
 			this.inputMoney -= stock * drinkMachine.getPrice();	//사용자가 주문한 금액만큼 빼줌
 			//inputMoney가 사용자가 넣은 돈이자 거스름돈이 됨

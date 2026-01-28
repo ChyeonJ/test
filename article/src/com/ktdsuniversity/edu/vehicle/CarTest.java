@@ -15,20 +15,16 @@ public class CarTest {
 		Vehicle car1 = new BatMobile("맹모빌", false, false, false,"ㅎ;ㅣ히ㅣ힣");
 		
 		//배트 모빌
-		if(car instanceof BatMobile BatMobile) {
+		if(car1 instanceof BatMobile BatMobile) {
 			BatMobile.turnOn(car1);
 			BatMobile.turboSet(car1);
 		}
 		
 		Vehicle car2 = new EV("정깅창", false, 50f,"띠로리");
 		
-		if(car instanceof EV ev) {
+		if(car2 instanceof EV ev) {
 			ev.turnOn(car2);
 			ev.batteryCheck(car2);
 		}
-
-		
-
 	}
-
 }

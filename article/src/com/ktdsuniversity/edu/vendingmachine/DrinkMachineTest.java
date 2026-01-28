@@ -18,11 +18,11 @@ public class DrinkMachineTest {
 		
 		DrinkMachineArray da = new RestoreMoney(bak, mon, hot, mil);
 		
-		//주문기능
+		//주문기능//상속 변경
 		int result = da.orderDrinK(14, 3, 10000);
 		System.out.println("첫번째 결과 : "  + result);
 		System.out.println("주문금액 : " + result);
-		
+		//상속 변경
 		if (da instanceof RestoreMoney rfMachine) {
 			rfMachine.refund();
 		}
