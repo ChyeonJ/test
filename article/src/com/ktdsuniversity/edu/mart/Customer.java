@@ -7,10 +7,16 @@ public class Customer {
 	
 
 	private int money;
-	private double point;
+	private int point;
 	private String grade;
 	
-	public Customer(int money, double point, String grade) {
+	/**
+	 * 
+	 * @param money 돈
+	 * @param point 포인트
+	 * @param grade 등급
+	 */
+	public Customer(int money, int point, String grade) {
 		this.money = money;
 		this.point = point;
 		this.grade = grade;
@@ -28,7 +34,7 @@ public class Customer {
 		return point;
 	}
 	
-	public void setPoint(double point) {
+	public void setPoint(int point) {
 		this.point = point;
 	}
 	

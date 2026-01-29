@@ -46,44 +46,28 @@ public class NomalMart {
 		this.product = product;
 	}
 	
-	public void sell(Customer cs, String productName, int afterDiscountPrice) {
+	public void sell(Customer cs, String productName) {
 		
 		//구매자의 돈을 담아둔다 => 환불을 고려한다.
-		this.csMoney = cs.getMoney();
+		int customerMoney = cs.getMoney();
 		
 	    for (int i = 0; i < this.product.length; i++) {
-	        if (this.product[i].getProductName().equals(productName)) {
+	        if (this.product[i].getProductName().equals(productName)) {	//상품이름 검증
 	        	//고객의 돈이 상품을 살수 있는지 검증
-	        	if(cs.getMoney() < product[i].getPrice()) {
+	        	if(customerMoney < product[i].getPrice()) {
 	        		System.out.println("물품의 가격은 " + product[i].getPrice() + "입니다. 잔액이 부족합니다.");
 	        		return;
 	        	}//구매자로부터 돈을 받고 판매하고 남은 거스름돈을 구매자에게 돌려준다.
-	        	else if(product[i].getProductName().equals(productName)){
 	        		this.moenyBox += product[i].getPrice();
-	        		this.csMoney -= product[i].getPrice();
-	        		cs.setMoney(this.csMoney);
+	        		customerMoney -= product[i].getPrice();
+	        		cs.setMoney(customerMoney);
 	        		System.out.println("결제완료");
-	    			System.out.println(cs.getMoney() + "원 환불 되었습니다.");
-	        		//refund();	=> discount한 후에 출력해도 될듯
-	        	}else {
-	        		System.out.println("없는 상품 입니다.");
+	        		System.out.println("거스름돈 : " + cs.getMoney());
 	        		return;
 	        	}
-	        }
-	    }
+	       }
+	    	System.out.println("없는 상품 입니다.");
 	}
-	
-	
-	public void refund() {
-		int reMoney = this.getCsMoney();
-		if(reMoney > 0) {
-			System.out.println(reMoney + "원 환불 되었습니다.");
-		}
-	}
-	
-	public void sellerStatus() {
-		System.out.println("총 수익금 : " + this.moenyBox);
-	}
-	
-	
 }
+	
+

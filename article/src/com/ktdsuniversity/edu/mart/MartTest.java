@@ -11,21 +11,20 @@ public class MartTest {
 		
 		NomalMart pr = new NomalMart(a, b, c);
 		
-		Customer cs1 = new Customer(10_000, 10000, null);
+		Customer cs1 = new Customer(10_000, 1000, null);
 		
 		NomalMart conven = new Convenience(a, b, c);
 		
 		//NomalMart 일반마트
-		pr.sell(cs1, "싼옷");
-		pr.sellerStatus();
+		pr.sell(cs1, "땡처리");
 		
 		System.out.println("----------------------------------------");
 		
 		//Convenience 편의점
 		if(conven instanceof Convenience cv) {
-			cv.convenienceSell(cs1, "싼옷");
-			cv.convenienceSell(cs1, "싼옷");
-			cv.convenienceSell(cs1, "싼옷");
+			cv.sell(cs1, "싼옷");
+			cv.sell(cs1, "싼옷");
+			cv.sell(cs1, "싼옷");
 
 		}
 		
