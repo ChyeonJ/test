@@ -1,25 +1,57 @@
 package com.ktdsuniversity.edu.implement;
 //규격을 정할 때 implements
-public class SamsungTV implements TV {
-
+/**
+ * Before
+ * TV
+ * SamsunSmartTV
+ * 		- SamsungTV ( TV + SamsungSmartTV)
+ * LgSmartTV
+ * 		- LgTV (TV + LgSmartTV)
+ * 
+ * After
+ * TV
+ * 	-SamsungSmartTV
+ * 		-SamsungTV
+ * 	-LgSmartTV
+ * 		-LgTV
+ */
+public class SamsungTV implements SamsungSmartTV {
+	
+	//TV.interface
 	@Override
 	public void turnOn() {
-		
+		System.out.println("삼성 티비를 켭니다.");
 	}
 
 	@Override
 	public void turnOff() {
-		
+		System.out.println("삼성 티비를 끕니다.");
 	}
 
 	@Override
 	public void changeChannel(int channelNumber) {
-		
+		System.out.println("삼성티비의 채널을 바꿉니다. : " + channelNumber);
+	}
+	
+	//SamsungSmartTV.interface
+	@Override
+	public void changeVolumn(int volumn) {
+		System.out.println("삼성티비의 볼륨을 바꿉니다 : " + volumn);
 	}
 
 	@Override
-	public void changeVolumn(int volumn) {
-		
+	public void runNetflix() {
+		System.out.println("삼성티비의 넷플릭스를 실행합니다.");
+	}
+
+	@Override
+	public void runMenu() {
+		System.out.println("삼성티비의 메뉴를 실행합니다.");
+	}
+
+	@Override
+	public void runCoupangPlay() {
+		System.out.println("삼성티비의 쿠팡플레이를 실행합니다.");
 	}
 	
 	
