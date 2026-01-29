@@ -73,6 +73,7 @@ public class NomalMart {
 	    }
 	}
 	
+	
 	public void refund() {
 		int reMoney = this.getCsMoney();
 		if(reMoney > 0) {
